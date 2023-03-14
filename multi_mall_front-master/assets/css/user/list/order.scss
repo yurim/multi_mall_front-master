@@ -1,0 +1,52 @@
+.order_wrap {
+  > ul { font-size: 0;
+    li { padding: 0 !important; font-size: 0;
+      > * { font: initial !important; }
+      table {
+        tr { border-bottom: 1px solid #E1E1E1; }
+        thead {
+          th { font-weight: bold; font-size: 16px;
+            .checkbox_wrap { margin-left: 20px;
+              label { font-size: 12px; font-weight: normal; }
+            }
+          }
+        }
+        tbody {
+          tr:first-child { border-top: 1px solid #E1E1E1; }
+        }
+        tr:last-child { border-bottom: 0; }
+        th, td { text-align: left; padding: 15px; border: 0; border-left: 1px solid #E1E1E1; font-size: 14px; line-height: 18px; }
+        th:first-child, td:first-child { border-left: 0; }
+        th { background: white; }
+        td {
+          .square_but_wrap.coupon_wrap {
+            > * { width: 100%; margin-bottom: 5px; }
+            > *:last-child { margin-bottom: 0; }
+          }
+          .explain_wrap { color: #777; font-size: 14px; }
+          .border_explain_wrap { float: left; border: 1px solid #777; color: #777; width: 100%; padding: 15px; margin-top: 20px; max-height: 250px; overflow-y: scroll; font-size: 14px; }
+          label { font-size: 14px !important; }
+        }
+
+      }
+
+
+      .order_product_wrap {
+        > * { display: inline-block; float: left; }
+        .order_product_wrap__img_wrap { width: 80px; margin-right: 10px;
+        }
+        .order_product_wrap__info_wrap { width: calc(100% - 90px);
+          > * { display: inline-block; float: left; width: 100%; margin-bottom: 5px; }
+          > *:last-child { margin-bottom: 0; }
+          .order_product_wrap__info_wrap__brand { color: $main_c_01; }
+          .order_product_wrap__info_wrap__title { font-weight: bold; }
+        }
+      }
+    }
+  }
+}
+
+//주문성공
+.order_complete_wrap { padding: 40px 0; text-align: center;
+  .order_complete_wrap__title_wrap { font-size: 22px; }
+}

@@ -1,0 +1,44 @@
+.v-select, .vs--single, .vs--searchable { height: 34px !important; }
+.vs__selected { position: absolute; left: 5px; top: 50%; transform: translate(0, -50%); z-index: 100; }
+.vs__actions { position: absolute; right: 5px; top: 50%; transform: translate(0, -50%); z-index: 150; }
+
+// 스토어 어드민 셀렉트
+.mount_li__btn_wrap {
+  .v-select { height: auto !important; }
+  input::placeholder { color: #707070; }
+  .vs__selected , .vs__actions { position: relative; left: 0; top: 0; transform: initial;}
+  .vs__selected {
+    display: flex; align-items: center; background-color: #f0f0f0; border: 1px solid rgba(60,60,60,.26);
+    border-radius: 4px; color: #333; line-height: 1.4; margin: 4px 2px 0; padding: 0 .25em; z-index: 0; height: 34px;
+  }
+  .vs__dropdown-toggle { padding: 0 0 4px 0 !important; border: 1px solid rgba(60, 60, 60, 0.26) !important; }
+  .vs__selected-options { padding: 0 2px !important; }
+  .vs__search, .vs__search:focus {
+    appearance: none; line-height: 1.4; font-size: 1em; border: 1px solid transparent; border-left: none;
+    outline: none; margin: 4px 0 0; padding: 0 7px; background: none; box-shadow: none; width: 0;
+    max-width: 100%; flex-grow: 1; z-index: 1;
+  }
+  .vs__actions { padding: 4px 6px 0 3px !important; }
+  .vs__clear { cursor: pointer !important; }
+}
+// 스토어 어드민 배송대행신청 셀렉트
+.v-select_wrap {
+    .v-select {  width: 100%; height: auto !important; }
+   ul.vs__dropdown-menu { font-size: 0;
+    li { font-size: 14px;
+      &::after { content: ""; display: block; clear: both; }
+    }
+    .vs__dropdown-option , .vs__no-options { display:block; width: 100%; padding: 5px 10px; }
+    .vs__actions {  position: absolute; right: -10px !important; top: 50%; transform: translate(0, -50%); z-index: 150;
+      .vs__open-indicator { fill: rgba(112,112,112,1) !important; }
+    }
+    .vs__dropdown-option { margin-bottom: 0 !important; }
+    .vs__dropdown-option--highlight { background: #fafafa; color: #333;}
+  }
+
+  .vs__dropdown-toggle { min-height: 34px; border: 1px solid #b7b7b7; border-radius: 0; padding: 5px; background: white; position: relative;
+    input { border: 0; background: none; width: 100%; max-width: 100%; flex-grow: 1; z-index: 1; padding: 0; height: auto; line-height: initial;
+      position: absolute; left: 0; top: 0; }
+    .vs__selected , .vs__actions { position: relative; left: 0; top: 0; transform: initial; }
+  }
+}

@@ -1,0 +1,109 @@
+
+
+//상품목록, 입점 매장 목록
+.index_present_condition {
+  &.flex_wrap {
+    > * { float: left; display: inline-block; text-align: center; }
+    .info_wrap { display: inline-block; max-width: 140px;
+      .img_wrap,.text_wrap, .num_wrap{ display: inline-block; float: left; text-align: left; }
+      .img_wrap { width: 50px; height: 50px; @extend .radius_st; background: $color_gray_4; padding: 10px; text-align: center;
+        img { height: 30px; }
+      }
+      .text_wrap { margin-left: 10px; width: calc(140px - 50px - 10px); }
+      .num_wrap { margin-left: 10px; width: calc(140px - 50px - 10px); }
+    }
+  }
+}
+
+//검색
+.search_wrap { float: left; display: inline-block; font-size: 0 !important; width: 100%;
+  > li { background: $color_gray_fb; font-size: initial; float: left; }
+  //> li:last-child { background: white; }
+  .page_title { background: white; }
+  .title {  }
+  .body {
+    input[type='text'], select { height: 30px; line-height: 30px; }
+    select:only-child { margin-bottom: 0;}
+    select { margin-bottom: 10px; }
+  }
+}
+.search_icon_wrap { display: inline-block; width:100%; max-width: 600px; margin-top: 40px;
+  $height:40px;
+  > * { float:left; height: $height !important; line-height: calc(#{$height - 10px}) !important; padding: 5px; }
+  input { width: calc(100% - 60px); }
+  a { background: black; color: white; text-align: center; width: 60px; }
+}
+
+//카테고리
+.category_select_wrap { display: flex; border: 1px solid $color_gray_b7;
+  > * { display: inline-block; float: left; flex: 1; }
+  ul { height: 200px; overflow-y: auto; padding: 5px !important; border-right: 1px solid $color_gray_b7; background: white;
+    li { line-height: 24px;
+      a.on { color: $main_c_01; font-weight: bold;}
+    }
+  }
+  ul:last-child { border-right: 0; }
+}
+
+.category_list_wrap { display: inline-block; padding-top: 10px;
+  > * { float: left; color: $main_c_01; }
+  span { margin-right: 10px; }
+  ul { display: inline-block; float: left;
+    li { float: left; margin-right: 15px; position: relative; color: $main_c_01; }
+    li:after { content: '>'; position: absolute; right: -10px; }
+    li:last-child { margin-right: 0; }
+    li:last-child:after { content: '';}
+  }
+  a { background: $main_c_01; color: white; font-size: $font_xs; padding: 0 10px; line-height: 25px; margin: 5px 10px 0; display: inline-block; float: left;  }
+}
+
+//섬네일 기본
+.thumbnail_wrap { position: relative; display: inline-block; width: 60px; height: 60px;
+  a { position: absolute; display: inline-block; padding: 5px; background: $main_c_01; color: white; font-size: $font_xs; line-height: $font_xs; font-weight: bold; }
+  .del_icon { top: 0; right: 0; }
+  .edit_icon { bottom: 0; right: 0;
+    label { min-width: unset; height: unset; padding: unset; line-height: unset; font-size: 10px; border: unset; }
+  }
+  img { width: 100%; max-height: 60px;  background: $color_gray_f3; }
+}
+.img_list_wrap {
+  li { width: 60px; text-align: center; border: 1px solid $color_gray_b7;
+    div { font-size: $font_xs; line-height: $font_xs; padding-top: 5px; }
+    img { width: 100%; }
+  }
+}
+
+.editor_show_wrap { border: 1px solid #B7B7B7; max-height: 450px; overflow-y: scroll; padding: 10px; }
+.editor_wrap { border: 1px solid #B7B7B7; min-height: 350px; overflow-y: scroll; padding: 10px; }
+
+.border_list_wrap {
+  > * { border: 1px solid $main_c_01; }
+}
+.keyword_wrap {
+  > * { display: inline-block; color: $main_c_01; padding: 2px 5px; margin-right: 5px; }
+  > *:last-child { margin-right: 0; }
+  a { color: $main_c_01; }
+}
+
+
+.even_list_wrap {
+  //2단
+  li { width: 49%; margin-right: 2%; float: left; display: inline-block; margin-bottom: 10px;
+    .title_text { font-weight: bold; margin-bottom: 20px; }
+    .body_text { color: #A7A7A7; }
+  }
+  li:nth-child(2n+2) { margin-right: 0; }
+}
+
+
+//상하단 탭메뉴모음
+.tab_menu_wrap { display: inline-block;
+  li { display: inline-block; float: left; margin-right: 5px;
+    a {
+      font-size: 14px; border: 1px solid $main_c_01; border-radius: 5px;
+      color: $main_c_01; padding: 2px 10px; display: inline-block; background-color: white;
+    }
+    a.on { background: $main_c_01; color: white; }
+  }
+  li:last-of-type { margin-right: 0; }
+}

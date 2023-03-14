@@ -1,0 +1,126 @@
+
+.paginationWrap {
+  input { border: none !important; }
+  button { border: none !important; }
+
+  //페이지 셀렉트
+  .multiselect { width: 160px !important; }
+}
+.table_size_l {
+  .v-data-table__wrapper {
+    table { min-width: 4000px !important; }
+  }
+}
+.table_size_sm{
+  .v-data-table__wrapper {
+    table { min-width: 2500px !important; }
+  }
+}
+.table_size_s {
+  .v-data-table__wrapper {
+    table { min-width: 2000px !important; }
+  }
+  .text {
+    a { color: $color_b; text-underline: $color_b; }
+  }
+}
+.table_size_xs {
+  .v-data-table__wrapper {
+    table { min-width: 1500px !important; }
+  }
+}
+.table_size_auto {
+  .v-data-table__wrapper {
+    table { min-width: auto !important; }
+  }
+}
+
+.v-data-table__wrapper { max-height: 450px; overflow: scroll;
+  table { min-width: 1200px; word-break: keep-all !important;
+    [class="text"] {
+      a { color: $color_b; text-underline: $color_b; }
+    }
+    thead {
+      tr {
+        th { border-top: none; background: #F8F8F8 !important; }
+        th:first-of-type { border-left: none;}
+        th:last-of-type { border-right: none;}
+      }
+    }
+    tbody {
+      //tr:hover:not(.v-data-table__expanded__content):not(.v-data-table__empty-wrapper){ background: #fff !important;}
+     tr {
+       td { padding: 5px !important; height: initial !important; line-height: initial !important; margin: 0 !important;
+            border-top: none; border-bottom: none;
+       }
+       td:first-of-type { border-left: none;}
+       td:last-of-type { border-right: none;}
+     }
+    }
+    table{ min-width: auto; }
+  }
+  .v-input--selection-controls__input { margin: auto; padding-top: 14px; }
+  .v-input--selection-controls__ripple:before { opacity: 0 !important; }
+  .v-input--selection-controls__ripple { display: none !important; }
+}
+
+.v-application ul, .v-application ol { margin: 0 !important; padding-left: 0 !important; }
+ul { padding-left: 0 !important; }
+
+
+.sales_dispatch_wrap {
+  table > tbody > tr > td.fixed,
+  table > thead > tr > th.fixed {
+    position: sticky !important;
+    position: -webkit-sticky;
+    background: white;
+  }
+  table tr:hover,
+  table > tbody > tr:hover > td.fixed,
+  table > thead > tr:hover > th.fixed {
+    background: #eeeeee;
+  }
+
+  table > thead > tr > th.fixed:before,
+  table > tbody > tr:last-of-type > td.fixed:before { border-bottom: 0 !important; }
+
+  .checkbox_fixed table .thead > tr > th:first-of-type,
+  table > thead > tr > th.fixed:before,
+  table > tbody > tr > td.fixed:before {
+    content: '';
+    border: 1px solid #E1E1E1;
+    width: calc(100% + 2px);
+    height: calc(100% + 2px);
+    position: absolute; left: -1px; top: -1px;
+    z-index: -1;
+  }
+
+  table > tbody > tr > td.fixed:nth-child(1),
+  table > thead > tr > th.fixed:nth-child(1) {
+    left: 0;
+    z-index: 8000;
+  }
+  table > tbody > tr > td.fixed:nth-child(2),
+  table > thead > tr > th.fixed:nth-child(2) {
+    left: 44px;
+    z-index: 8001;
+  }
+  table > tbody > tr > td.fixed:nth-child(3),
+  table > thead > tr > th.fixed:nth-child(3) {
+    left: 174px;
+    z-index: 8002;
+    //border-right: 1px solid red !important;
+  }
+
+  .checkbox_fixed {
+    thead > tr > th:first-of-type {
+      position: sticky !important;
+      left: 0;
+      z-index: 9000 !important;
+    }
+  }
+
+  table > thead > tr > th.fixed {
+    z-index: 9000 !important;
+  }
+}

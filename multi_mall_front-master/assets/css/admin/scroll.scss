@@ -1,0 +1,22 @@
+//스크롤 숨기기
+* {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.quill_editor::-webkit-scrollbar{ display: none; }
+.quill_editor {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+//*::-webkit-scrollbar { display: none; }
+//html::-webkit-scrollbar, body::-webkit-scrollbar{ display: initial !important; }
+//
+//.header + *::-webkit-scrollbar{ display: initial !important; }
+
+//스크롤 표시
+.content_box_wrap, .content_wrap, body {
+  -ms-overflow-style: auto !important; /* IE and Edge */
+  scrollbar-width: auto !important; /* Firefox */
+}

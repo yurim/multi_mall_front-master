@@ -1,0 +1,51 @@
+//컬러 관련
+$main_c_01: #14ccb3;
+$main_c_02: #f39700;
+
+$color_r: red;
+$color_g: green;
+$color_b: #0F61FD;
+$color_y: yellow;
+
+$color_gray_a: #AAA;
+$color_gray_b7: #b7b7b7;
+$color_gray_4: #444444;
+$color_gray_7: #777777;
+$color_gray_fb: #FBFBFB;
+$color_gray_f3: #F3F3F3;
+$color_gray_70: #707070;
+$color_gray_9D: #9D9D9D;
+
+//테이블관련 색
+$color_gray_f8: #F8F8F8;
+$color_gray_e1: #E1E1E1;
+
+
+//폰트
+$font_xs: 10px;
+$font_s: 13px;
+$font_m: 15px;
+$font_l: 20px;
+
+
+//미디어쿼리
+$screen-sm: 768px;
+$screen-md: 992px;
+
+.color_main_01 { color:#14CCB3 }
+.color_gray_7 { color: $color_gray_7 !important; }
+
+.d_ib_100 { display: inline-block; width: 100%; }
+.d_ib { display: inline-block !important;}
+
+.color_r { color: #FF0000; }
+.color_y { color: #ffba00 !important; }
+.color_g { color: green; }
+.bg_yellow { background: #FFFEE2; }
+.bg_gray { background: #f3f3f3;}
+
+.flex_wrap { display: flex;
+  > * { flex: 1; overflow: auto; display: inline-block; text-align: center; justify-content: space-between; }
+}
+
+

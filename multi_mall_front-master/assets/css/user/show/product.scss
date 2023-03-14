@@ -1,0 +1,198 @@
+//제품 상세
+.product_show_wrap {
+
+  .top_info_wrap {
+    //상단 좌우구분만
+    .top_info_wrap__left { display: inline-block; float: left; width: 48%; margin-right: 4%; position: relative; }
+    .top_info_wrap__right { display: inline-block; float: left; width: 48%; }
+
+    //상단 좌우 스타일
+    .top_info_wrap__left {
+      .slide_vis { position: relative;
+        img { width: 100%; max-width: 100%; cursor: pointer;}
+
+        .swiper-button-prev, .swiper-button-next { height: auto !important; }
+        .swiper-button-prev:after, .swiper-button-next:after { font-size: 25px !important; }
+      }
+    }
+
+
+    .top_info_wrap__right {
+
+      //옵션 다 선택하면 나오는 리스트
+      .top_info_wrap__right__option_list { margin-top: 15px; @extend .d_ib_100; overflow-y: auto; max-height: 450px;
+        li { margin-bottom: 5px;
+          .top_info_wrap__right__option_list__wrap { background: #FAFAFA; @extend .d_ib_100; padding: 10px; font-weight: 500;
+            > * { float: left; display: inline-block; }
+
+            .top_info_wrap__right__option_list__title { margin-bottom: 5px; width: calc(100% - 30px); margin-right: 10px; }
+            .top_info_wrap__right__option_list__icon { width: 20px;
+              img { width: 100%; }
+            }
+            .top_info_wrap__right__option_list__option { width: 100%; margin-bottom: 10px; }
+
+            .total_price_wrap__number { max-width: 150px; width: 100%; }
+            .total_price_wrap__price { line-height: 35px; }
+          }
+        }
+        li:last-child { margin-bottom: 0; border-bottom: 1px solid #E5E5E5; padding-bottom: 10px; }
+      }
+      .total_area {
+        > * { display: inline-block; }
+      }
+      .price_compare_btn_wrap { display: inline-block; width: 100%; font-size: 22px; height: 36px;
+        margin-bottom: 10px; margin-top: 20px;
+        .price_compare { height: 36px; line-height: 36px; width: 100%; display: inline-block; text-align: center;
+          position: relative; color: white; font-size: 16px; font-weight: 500; z-index: 1;
+          background-image: linear-gradient(90deg, #FF6B00 -62.78%, #FFC700 137.22%) !important;
+          padding: 0 15px 0 30px; border-radius: 36px;
+
+          &:after {
+            content: ""; display: block; position: absolute; top: 50%; left: calc(50% - 95px); transform: translate(-50%,-50%); width: 25px; height: 25px;
+            background: url("data:image/svg+xml,%3Csvg fill='%23FFFFFF' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 26'%3E%3Cpath d='M2.098 6.433a.766.766 0 0 1-.349-.082L.47 5.758a.817.817 0 0 1-.395-1.082.817.817 0 0 1 1.082-.395l1.291.604a.817.817 0 0 1 .396 1.082.847.847 0 0 1-.745.466ZM4.785 4.176a.83.83 0 0 1-.674-.36l-1.163-1.71a.808.808 0 0 1 .22-1.129.808.808 0 0 1 1.129.221l1.163 1.71a.808.808 0 0 1-.22 1.128.802.802 0 0 1-.455.14ZM8.287 3.14a.81.81 0 0 1-.815-.814V.814A.81.81 0 0 1 8.287 0 .81.81 0 0 1 9.1.814v1.512a.817.817 0 0 1-.814.815ZM12.986 13.842l-.547.012.28.942.267-.954ZM8.1 14.82l.268-.943h-.547l.28.942Z'/%3E%3Cpath d='M18.36 12.981v-.034a7.973 7.973 0 0 0-7.968-7.968 7.973 7.973 0 0 0-7.968 7.968 7.973 7.973 0 0 0 7.968 7.968h.012c.72 2.803 3.28 4.885 6.304 4.885a6.516 6.516 0 0 0 1.652-12.819Zm-1.652 5.665.186.64h-.372l.186-.64Zm-5.758-4.792-1.105.011-.465 1.664c-.128.5-.28.872-.43 1.128-.152.256-.43.384-.826.384a1.01 1.01 0 0 1-.512-.116.966.966 0 0 1-.349-.338 2.993 2.993 0 0 1-.256-.511c-.07-.198-.128-.361-.174-.477l-.594-1.71h-.814a.531.531 0 0 1-.535-.524c0-.29.233-.535.524-.535h.453l-.558-1.617c-.151-.407-.221-.698-.233-.849 0-.198.082-.372.233-.535.151-.163.349-.233.57-.244.302 0 .512.081.616.256.105.174.221.465.35.884l.627 2.094 1.152-.012.5-1.803c.116-.396.198-.675.256-.814.058-.151.163-.291.314-.42.151-.127.36-.197.628-.197s.489.058.64.198c.151.128.268.28.326.43.058.151.151.42.267.803l.524 1.803 1.163-.012.605-2.094c.081-.29.14-.511.186-.64a.87.87 0 0 1 .244-.348c.117-.105.28-.151.5-.151a.8.8 0 0 1 .57.22.701.701 0 0 1 .245.536c0 .186-.07.477-.198.849l-.535 1.617h.453c.291 0 .536.232.536.523 0 .29-.233.535-.524.535h-.814l-.57 1.722c-.128.372-.221.64-.303.802-.07.163-.186.314-.337.442-.151.128-.36.198-.628.198-.28 0-.5-.07-.651-.21a1.243 1.243 0 0 1-.361-.511 8.753 8.753 0 0 1-.256-.78l-.454-1.651Zm4.235 6.235-.198.71-.21-.71h.408Zm1.523 4.664a5.479 5.479 0 0 1-5.246-3.92 7.864 7.864 0 0 0 2.164-.616l.395 1.163c.035.093.07.21.128.36.058.152.117.28.186.384.07.105.163.198.268.256a.78.78 0 0 0 .384.093c.29 0 .5-.093.616-.29.117-.198.233-.477.326-.85l.349-1.244h.826l.36 1.244c.07.245.128.442.187.594.058.15.15.279.267.383.116.105.28.152.489.152.197 0 .36-.047.477-.152a.898.898 0 0 0 .255-.337c.059-.128.128-.326.233-.605l.442-1.291h.605a.392.392 0 0 0 .395-.396.392.392 0 0 0-.395-.395h-.337l.418-1.221c.105-.291.152-.5.152-.64a.535.535 0 0 0-.187-.407.598.598 0 0 0-.43-.175c-.163 0-.29.035-.384.117a.591.591 0 0 0-.186.267c-.035.105-.081.256-.151.477l-.465 1.57h-.873l-.384-1.36a6.152 6.152 0 0 0-.197-.606.968.968 0 0 0-.21-.29 7.843 7.843 0 0 0 1.059-3.001c2.245.674 3.896 2.768 3.896 5.234a5.424 5.424 0 0 1-5.432 5.502Zm1.536-4.664h.419l-.21.71-.21-.71Z'/%3E%3Cpath d='M10.136 12.807h.5l-.255-.86-.245.86Z'/%3E%3C/svg%3E") no-repeat 50%;
+           }
+          &:before {
+            content: ""; display: block; position: absolute; top: -25px; right: 85px; border-width: 14px 8px;
+            border-style: solid; border-color: transparent transparent #ffac00 transparent; z-index: -1;
+          }
+        }
+      }
+      .but_wrap {
+        > a { display: inline-block; float: left; width: 49%; margin-right: 2%; }
+        > a:last-child { margin-right: 0; }
+      }
+    }
+    .product_info_wrap {
+      //compare_price.scss 내용
+    }
+  }
+
+  //하단 내용
+  .bottom_info_wrap { display: inline-block; width: 100%; margin-top: 60px;
+    //하단 좌우구분만
+    .bottom_info_wrap_left { display: inline-block; float: left; width: calc(100% - 310px); margin-right: 30px; }
+    .bottom_info_wrap_right { display: inline-block; float: left; width: 280px; margin-top: 40px; }
+
+    //하단 좌측
+    .bottom_info_wrap_left {
+      > div { @extend .d_ib_100; margin-bottom: 40px; }
+
+      //관련상품
+      .bottom_info_wrap_left__relation_product_wrap { @extend .d_ib_100;
+        li { @extend .d_ib; width: 20%;
+          .bottom_info_wrap_left__relation_product_wrap__img_wrap { @extend .d_ib_100; img { @extend .d_ib_100;} }
+        }
+      }
+      //탭메뉴
+      .tab_detail_content {
+        display: inline-block; width: 100%; text-align: center; padding-top: 40px; margin-top: 40px; margin-bottom: 35px; border-bottom: 1px solid $color_gray_9D;
+        li { @extend .d_ib; float: left; width: 25%; text-align: center; padding: 10px 0; position: relative;
+          a { color: $color_gray_9D; font-weight: 500; font-size: 14px;}
+        }
+        li.on {
+          a { color: $main_c_01;
+            span { color: black; }
+          }
+          &:after { content: ""; position: absolute; left: 0; bottom: -2px; height: 3px; width: 100%; background: $main_c_01; }
+        }
+      }
+      //옵션명 + 이미지
+      .option_detail_wrap {
+        img, .img_bg_wrap { width: 100%; max-width: 100%; margin-bottom: 60px;}
+        > img:last-child,
+        > .img_bg_wrap:last-child { margin-bottom: 0; }
+      }
+      .detail_wrap {
+        img { width: 100%; max-width: 100%; }
+        > img:last-child { margin-bottom: 0; }
+      }
+    }
+
+
+    //우측 따라 다니는 부분
+    .bottom_info_wrap_right { position: relative;
+
+      .sticky_option { width: 100%; padding-top: 20px; }
+
+      .bottom_info_wrap_right__select_wrap { @extend .d_ib_100;
+        li { @extend .d_ib_100; margin-bottom: 10px; }
+        li:last-child { margin-bottom: 0; }
+        select {cursor: pointer;}
+      }
+
+      .bottom_info_wrap_right__option_list { margin-top: 10px; @extend .d_ib_100; overflow-y: auto; max-height: 170px;
+        li { @extend .d_ib_100; margin-bottom: 5px; padding: 10px; background: #FAFAFA; font-weight: 500;
+          > * { float: left; display: inline-block; }
+
+          .bottom_info_wrap__right__option_list__title { margin-bottom: 5px; width: calc(100% - 40px); margin-right: 10px; }
+          .bottom_info_wrap__right__option_list__icon { width: 20px;
+            img { width: 100%; }
+          }
+          .bottom_info_wrap__right__option_list__option { width: 100%; margin-bottom: 10px; }
+
+          .total_price_wrap__number { max-width: 150px; width: 100%; }
+          .total_price_wrap__price { line-height: 35px; }
+        }
+        li:last-child { margin-bottom: 0; }
+      }
+      .total_area {
+        > * { display: inline-block; }
+      }
+      .but_wrap {
+        > a { display: inline-block; float: left; width: 49%; margin-right: 2%; }
+        > a:last-child { margin-right: 0; }
+      }
+
+    }
+  }
+}
+
+// 상품상세 오른쪽
+.ul_table_wrap { display: inline-block; float: left; width: 100%;
+  > li { display: inline-block; float: left; width: 100%; border-bottom: 1px solid #E5E5E5; padding: 10px 0;
+    > div { display: inline-block; float: left; font-size: 16px !important; line-height: 26px; }
+    .tit { color: #707070; width: 80px; margin-right: 10px; line-height: 26px; word-break: keep-all; }
+    .body { width: calc(100% - 90px); font-weight: 500;
+      &.fs_normal { text-decoration: line-through !important; font-weight: normal; }
+      select { height: 26px; line-height: 26px; cursor: pointer; }
+      .store_tit {}
+      // 별점
+      .reaction {
+        > div + div { margin-left: 15px; }
+        .data { color: #707070; font-weight: 400;
+          a { color: #707070; }
+        }
+      }
+    }
+  }
+}
+
+//공유
+.product_icon_wrap { display: inline-block; float: right;
+  > * { display: inline-block; float: left; }
+  > li { margin-right: 10px;
+    > ul { width: 100%;
+      > li {}
+    }
+  }
+  > li:last-child { margin-right: 0; }
+
+  .share_icon_wrap { position: relative;
+    > a { width: 20px; display: inline-block; margin-top: 2px;
+      img { width: 100%; }
+    }
+    .share_icon_wrap__share_icon_list_wrap {
+      position: absolute; display: inline-block; left: 0; bottom: -40px; width: 160px; background: #7F828B; padding: 5px !important;
+      li { display: inline-block; float: left; width: 30px; height: 30px; text-align: center;
+        a { display: inline-block; width: 20px; margin-right: 4px;
+          img { width: 100%; }
+        }
+        a:last-child { margin-right: 0; }
+      }
+    }
+  }
+  .like_icon_wrap { display: none; }
+}
+
+
+.option_action_img_wrap { position: absolute; top: 34px; left: 0; z-index: 10000; width: 100%; }

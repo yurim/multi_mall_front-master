@@ -1,0 +1,55 @@
+//컬러 관련
+$main_c_01: #4A6EEF;
+
+$main_c_y: #FBFF35;
+$main_c_b: #4A6EEF;
+
+$color_r: #FF0000;
+$color_g: green;
+$color_b: #0F61FD;
+
+$color_black_40: #404040;
+$color_gray_a: #AAA;
+$color_gray_b7: #b7b7b7;
+$color_gray_df: #dfdfdf;
+$color_gray_D4: #d4d4d4;
+$color_gray_4: #444;
+$color_gray_7: #777777;
+$color_gray_f3: #f3f3f3;
+$color_gray_70: #707070;
+$color_gray_9D: #9D9D9D;
+$color_gray_ef: #efefef;
+
+//테이블관련 색
+$color_gray_f8: #F8F8F8;
+$color_gray_e1: #E1E1E1;
+
+//폰트
+$font_xs: 10px;
+$font_s: 13px;
+$font_m: 15px;
+$font_l: 20px;
+
+
+//미디어쿼리
+$screen-sm: 768px;
+$screen-md: 992px;
+
+.d_ib_100 { display: inline-block; width: 100%; }
+.d_ib { display: inline-block !important;}
+
+
+.main_c_y { color: $main_c_y; }
+.main_c_b { color: $main_c_b; }
+.color_r { color: $color_r; }
+.color_black { color: black !important; }
+.color_gray_7 { color: $color_gray_7 !important; }
+.color_gray_70 { color: #707070 !important; }
+.color_main_01 { color:#4A6EEF !important; }
+
+
+.flex_wrap { display: flex;
+  > * { flex: 1; overflow: auto; display: inline-block; text-align: center; justify-content: space-between; }
+}
+
+

@@ -1,0 +1,41 @@
+//스크롤 숨기기
+* {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.quill_editor::-webkit-scrollbar{ display: none; }
+.quill_editor {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+//*::-webkit-scrollbar { display: none; }
+//html::-webkit-scrollbar, body::-webkit-scrollbar{ display: initial !important; }
+//
+//.header + *::-webkit-scrollbar{ display: initial !important; }
+
+//스크롤 표시
+.content_box_wrap, .content_wrap, body {
+  -ms-overflow-style: auto !important; /* IE and Edge */
+  scrollbar-width: auto !important; /* Firefox */
+}
+// 상단에 들어가는 sub nav 스크롤바
+.top_tab_nav_wrap{
+  &::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+    background: #ffffff;
+  }
+  &::-webkit-scrollbar-thumb {
+    border-radius: 3.5px;
+    background-color: #dfdfdf;
+
+    &:hover {
+      background-color: #ccc;
+    }
+  }
+  &::-webkit-scrollbar-track {
+    background: #ffffff;
+  }
+}

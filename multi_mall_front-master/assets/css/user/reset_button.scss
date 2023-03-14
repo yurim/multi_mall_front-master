@@ -1,0 +1,120 @@
+@import 'variable';
+@import 'mixin';
+
+.radius_st { border-radius: 0; }
+.radius_01 { border-radius: 1px; }
+
+.color_b { color: $color_b; }
+.color_black { color: black; }
+.under_line { text-decoration: underline !important; }
+
+$a_height : 40px;
+$a_line_height : 40px;
+
+
+//버튼 공통 스타일
+.but_style {
+  min-width: 100px; text-align: center; color: white; background: $main_c_01; display: inline-block; padding: 0 15px;
+  border: 1px solid $main_c_01; height: $a_height; line-height: $a_line_height;
+  @extend .radius_st; box-sizing: border-box;
+}
+.but_wrap { display: inline-block; width: 100%;
+  &.one {
+    a:only-child { margin-right: 0; width: 100% !important; }
+  }
+  a, button, input[type=submit] { @extend .but_style; margin-right: 5px; }
+  a:last-child, button:last-child, input[type=submit]:last-child { margin-right: 0; }
+}
+
+
+//작은 네모버튼
+.square_but_wrap { font-size: 0;
+  a, button, input[type=submit], .disabled { @extend .but_style; margin-right: 5px; border-radius: 0 !important; padding: 0 10px; font-size: $font_xs;
+    height: calc(#{$a_height} - 15px); line-height: calc(#{$a_line_height} - 15px); min-width: auto !important;
+  }
+  select, input { float: left; height: calc(#{$a_height} - 15px) !important; line-height: calc(#{$a_line_height} - 15px) !important; width: 120px; font-size: $font_xs; color: $color_gray_4; }
+  option {  }
+  a:last-child, button:last-child, input[type=submit]:last-child { margin-right: 0; }
+}
+
+//공통 작은 버튼
+.small_but_style {
+  @extend .radius_st;
+  text-align: center; color: white; background: $main_c_01; display: inline-block; padding: 2px 5px;
+  border: 1px solid $main_c_01; height: calc(#{$a_height} - 6px); line-height: calc(#{$a_line_height} - 10px); font-size: $font_s;
+}
+.small_but_wrap { display: inline-block;
+  a, button, input[type=submit] { @extend .small_but_style; height: calc(#{$a_height} - 10px); line-height: calc(#{$a_line_height} - 14px); }
+  a, button, input[type=submit]:last-child { margin-right: 0; }
+}
+
+
+//각 버튼 색만 변경해야할때
+.btn_small { @extend .small_but_style;
+  &.line_but { color: $main_c_01; border: 1px solid $main_c_01; background: white !important; }
+  &.black_line_but { color: black; border: 1px solid black; background: white !important; }
+  &.gray_but { color: white; border: 1px solid $color_gray_4; background: $color_gray_7 !important; }
+  &.gray_but_light { color: black; border: 1px solid $color_gray_4; background: $color_gray_f3 !important; }
+}
+
+//각 버튼 색만 변경해야할때
+.but_wrap, .small_but_wrap, .square_but_wrap, .product_btn_wrap {
+  .naver_but { color: white; border: 1px solid #3DAF43; background: #3DAF43 !important; }
+  .kakao_but { color: white; border: 1px solid #F1C40F; background: #F1C40F !important; }
+
+  .line_but { color: $main_c_01; border: 1px solid $main_c_01; background: white !important; }
+  .full_light_but { color: $main_c_01; border: 1px solid $main_c_01; background: #F2F5FF !important; }
+  .red_line_but { color: $color_r; border: 1px solid $color_r; background: white !important; }
+  .black_line_but { color: black; border: 1px solid black; background: white !important; }
+  .gray_but { color: white; border: 1px solid $color_gray_4; background: $color_gray_4 !important; }
+  .gray_line_but { color: black; border: 1px solid #C4C4C4; background: white !important; }
+  .gray_line_light_but { color: $color_gray_70; border: 1px solid $color_gray_D4; background: white !important; }
+  .gray_but_light { color: black; border: 1px solid $color_gray_4; background: $color_gray_f3 !important; }
+  .gray_full_light_but { color: black; border: 1px solid #EFEFEF; background: #F9F9F9 !important; }
+  .disabled_line_but { color: #afa8a8; border: 1px solid #afa8a8 !important; background: white !important; }
+  .disabled_but { color: white; border: 1px solid #4e4e4e !important; background: #4e4e4e !important; }
+}
+
+.sold_out_product {  }
+.unsell_product { text-align: center; display: inline-block; height: 45px; line-height: 45px; width: 100%; background: #4E4E4E; color: white; }
+
+
+//물음표 버튼(가격비교)
+.question_mark_btn_gray { display: inline-block; border: 1px solid #404040; position: relative;
+  $question_mark: 15px; font-size: 10px; font-weight: 400;
+  width: $question_mark; height: $question_mark; line-height: $question_mark;
+  border-radius: $question_mark; text-align: center; margin-left: 10px;
+  &:hover {
+    .inner { display: block !important; }
+  }
+  .inner { position: absolute; display: none; left: 10px; width: 150px; top: 10px; background: white; border: 1px solid black; z-index: 10;
+  text-align: left; padding: 10px; color: $color_gray_70;
+  }
+}
+
+.product_btn_style {}
+//버튼 공통 스타일
+.product_btn_style {
+  min-width: 100px; text-align: center; color: white; background: $main_c_01; display: inline-block; padding: 0 15px;
+  border: 1px solid $main_c_01; box-sizing: border-box; height: calc(#{$a_height} + 5px); line-height: calc(#{$a_line_height} + 4px);
+  vertical-align: middle; @extend .radius_st;
+}
+.product_btn_wrap { display: inline-block; width: 100%;
+  // a에 텍스트가 2줄일때
+  .line_h_18 { padding: 5px 15px; line-height: 18px; }
+  a, button, input[type=submit] { @extend .product_btn_style; margin-right: 5px; }
+  a:last-child, button:last-child, input[type=submit]:last-child { margin-right: 0; }
+
+  a:first-child:nth-last-child(1),
+  a:first-child:nth-last-child(1) ~ a { width: 100%; }
+
+  a:first-child:nth-last-child(2),
+  a:first-child:nth-last-child(2) ~ a { width: calc(50% - 5px); }
+
+  a:first-child:nth-last-child(3),
+  a:first-child:nth-last-child(3) ~ a { width: calc(33% - 5px); }
+
+  .guide_txt { font-size: 10px; color: $color_gray_9D;
+    &.white { color: white !important; background: none !important; }
+  }
+}

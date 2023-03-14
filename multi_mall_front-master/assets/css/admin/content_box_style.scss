@@ -1,0 +1,132 @@
+@import 'variable';
+@import 'reset_button';
+
+.content_box_wrap { float: left; @extend .d_ib_100;
+  .col_wrap { float: left; @extend .d_ib_100;
+    .col_one, .col_too, .col_three, .col_half { display: inline-block; float: left; margin-bottom: 15px;
+
+      .page_title { font-size: $font_m; font-weight: bold; border-bottom: 1px solid $color_gray_a; padding: 20px 10px 15px 10px; text-align: left;
+        > * { display: inline-block; float: left; }
+        > *:first-child { margin-right: 5px; }
+        div { display: inline-block; margin-left: 5px}
+        span { font-size: $font_xs; color: $color_b; font-weight: normal; margin-top: 10px; line-height: $font_xs; }
+      }
+      .table_scroll_m { overflow: auto;
+        //max-height: 450px;
+        table { min-width: 2500px;}
+        th,td { text-align: center !important;}
+      }
+      > table { box-shadow: 6px 5px 5px rgba(0, 0, 0, 0.05);
+        th { background: $color_gray_f8 !important; font-weight: bold; }
+      }
+
+      & .form_wrap > ul,
+      & form > ul,
+      > ul { width: calc(100% - 10px); display: inline-block; margin-bottom: 15px; background: white; padding-left: 0 !important; box-shadow: 6px 5px 5px rgba(0, 0, 0, 0.05);
+
+        > li:first-child { padding: 15px 10px; }
+        > li { padding: 10px; display: inline-block; width: 100%; position: relative;
+          > li { padding: 10px; display: inline-block; width: 100%; }
+          .title, .body { display: inline-block; float: left; font-size: $font_s !important; min-height: 30px; line-height: 30px;
+             &.l_h_20 { min-height: 20px; line-height: 20px ;}
+          }
+
+          > .title { color: #777; width: calc(150px); margin-right: 10px; }
+          > .body { width: calc(100% - 160px); }
+        }
+      }
+      > *:last-child { margin-bottom: 0; }
+
+      > table, .table_wrap { width: calc(100% - 10px); margin-bottom: 15px; background: white;
+        tr {
+          th { color: #777; }
+          th, td { font-size: $font_s !important; text-align: left; padding: 10px; }
+        }
+      }
+    }
+
+    .col_one { width: 33%; }
+    .col_too { width: 66%; margin-right: 0; }
+    .col_three { width: 99%; margin-left: 0;
+      .admin_category { height: auto; display: inline-block; line-height: 35px; }
+      .caution_text { background: #F9595A; color: white;  padding: 5px 10px;
+        display: inline-block; width: 100%;
+        > div { float: left; }
+        > div:first-child { font-size: 24px; width: 240px; font-weight: bold; line-height: 40px; }
+        > div:last-child { font-size: 14px; width: calc(100% - 240px); text-align: right; line-height: 20px; }
+      }
+    }
+    .col_half { width: 49.5%; margin-left: 0;
+      .admin_ztree_wrap { max-height: 500px; overflow-y: auto; }
+    }
+    .col_half:nth-child(2n + 2) { width: 49.5%; }
+  }
+}
+// 어메이직구
+.amazic_title { font-size: 22px; font-weight: bold; }
+.amazic_login_wrap { width: 100%; max-width: 600px; padding: 30px; margin: 0 auto 50px; background: white; box-shadow: 6px 5px 5px rgba(0, 0, 0, 0.05);
+  > * li { clear: both; }
+  .title{ width: 90px;float: left; margin-bottom: 10px; color: #777; font-size: 14px !important; }
+  .body{ width: calc(100% - 90px); float: left;
+    input { width: 100% !important; }
+  }
+}
+.title_info_wrap { @extend .d_ib_100;
+  > * { display: inline-block; float: left;}
+  .text_title { width: 95px;  margin-right: 5px; }
+  .text_info { width: calc(100% - 100px); word-break: break-all;
+   > p { color: #777; margin: 0; }
+  }
+}
+// 하우소프트
+.content_web { @extend .d_ib_100;
+.content_40, .content_60 { display: inline-block; float: left; margin-bottom: 15px; }
+  .content_40 { width: calc(40% - 10px);
+
+  }
+  .content_60 { width: calc(60% - 10px); }
+  .layout_body { width: calc(100% - 10px); display: inline-block; margin-bottom: 15px; padding: 10px !important;  background: white; box-shadow: 6px 5px 5px rgba(0, 0, 0, 0.05); }
+   ul {
+      li { display: inline-block; width: 100%; margin-bottom: 10px; }
+      li:last-of-type { margin-bottom: 0;}
+      .title_text, .body_text { display: inline-block; float: left; font-size: $font_s !important; height: 30px; line-height: 30px;}
+      .title_text { color: #777; width: calc(100px); margin-right: 10px; }
+      .body_text { width: calc(100% - 110px); }
+       textarea { border: 1px solid #B7B7B7; resize: none; }
+       input { width: 100%; }
+   }
+}
+// 미지정 상품 추가
+.price_comparison_group_list{ margin-top: 20px;
+  &.only {
+    li:only-child, li:last-of-type { border: 1px solid $main_c_01 !important; height: 130px; }
+  }
+  li { width: calc(50% - 5px);  float: left; margin-bottom: 10px; border: 1px solid #C4C4C4; margin-right: 10px; }
+  li:nth-child(2n+2) { margin-right: 0; }
+  &::after { content: ""; display: block; clear: both; }
+}
+
+.price_comparison_wrap {  display: table; width: 100%; padding: 10px 5px;
+  >  div { display: table-cell; vertical-align: middle; padding: 5px; }
+  .img_wrap { width: 130px;
+    img { display: block; width: 100%; }
+  }
+  .text_wrap { color: $color_gray_70;
+    em { color: $color_gray_9D;}
+    .main_item { background: $main_c_01; color: white; padding: 0 10px; text-align: center; font-size: 12px; margin-left: 5px; }
+  }
+  .square_but_wrap {
+    a { min-width: 65px !important; }
+  }
+}
+
+.add_price_comparison_wrap { position: relative; display: inline-block;  width: 100%; height: 100%;
+  .add_icon {
+    .plus_icon {
+      width: 25px; height: 25px; display: block; margin: 0 auto 10px auto; $color_14:14CCB3;
+      background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 27 27'%3E%3Cpath stroke='%23#{$color_14}' d='M13.224.553v25.449M26.002 13.224H.553'/%3E%3C/svg%3E") no-repeat 50%;
+    }
+    position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+    font-size: 14px; padding: 0; color: $main_c_01; white-space: nowrap;
+  }
+}

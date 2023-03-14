@@ -1,0 +1,88 @@
+@import 'variable';
+@import 'mixin';
+
+table { width: 100%; word-break: break-word;
+  th, td { text-align: center; padding: 10px 4px; border: 1px solid $color_gray_e1; }
+  thead {
+    tr {
+      th { background: $color_gray_f8; }
+    }
+  }
+  tbody {
+    tr {
+      td {  }
+    }
+  }
+}
+// 해외상품 주문조회
+.tbody_group {
+  th { background: $color_gray_f8; }
+  .tbody_group_list:first-of-type {
+    .body, span { cursor: pointer; color: #0F61FD; }
+  }
+  .input_file_wrap { span { line-height: 34px; } }
+  .checkbox_wrap { label { padding: 0 !important; } }
+  .small_but_wrap { width: 100%;
+      * { margin-right: 2%; }
+      *:last-child { margin-right: 0; }
+      a { float: left; }
+      a:first-child:nth-last-child(2),
+      a:first-child:nth-last-child(2) ~ a { width: calc(50% - 1%); }
+  }
+  > * .title { font-weight: bold; margin-right: 5px; }
+  > * .table_box {
+    li { width: 25%; float: left; word-break: break-all; padding: 0 5px; }
+  }
+    > * .body { a { color: #0F61FD; } }
+  .price_title { font-size: 18px; margin-bottom: 40px;
+    a { color: #0F61FD; }
+  }
+  > * .tbody_group_list_item {
+    li { width: 100%; }
+    .input_but_wrap {
+      input, a { height: 30px; line-height: 30px; }
+      input { width: calc(100% - 50px) !important; }
+      a { width: 40px; padding: 0 5px; }
+    }
+  }
+  > * .list_half {
+    .title { width: 45px; font-weight: normal;}
+    .body { width: calc(100% - 50px); }
+    .input_wrap { width: 100%; display: inline-block;
+      > * {  float: left; }
+      input { width: calc(100% - 70px); margin-right: 5px;}
+      select { max-width: 65px; }
+    }
+    select { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  }
+  // 레디오에 글자만 있을떄
+  > * .group_list { width: 100%;
+    li { display: inline-block; float: left; width: auto; margin-right: 10px;
+    &:last-child { margin-right: 0; }
+    }
+  }
+  // 레디오에 이미지가 있을떄
+  > * .group_list_style {
+    .radio_wrap {
+      [type="radio"]:checked + label, [type="radio"]:not(:checked) + label { height: auto;}
+      [type="radio"]:checked + label:before { transform: none; top: 0; }
+      [type="radio"]:checked + label:before, [type="radio"]:not(:checked) + label:before { transform: none; top: 0;}
+      [type="radio"]:checked + label:after, [type="radio"]:not(:checked) + label:after { top: 4px; }
+    }
+  }
+}
+
+//테이블상단 마크업관련
+.table_top_wrap { margin-bottom: 10px; float: left; width: 100%; display: inline-block;
+  * { margin-right: 5px; display: inline-block; }
+  *:last-child { margin-right: 0; }
+  div { margin-right: 10px; }
+  div:last-child { margin-right: 0; }
+
+  input, select, span, a, div { float: left; }
+  input, select { width: 100px; height: 26px; line-height: 26px; }
+}
+
+.show_table {
+  font-size: $font_s;
+}

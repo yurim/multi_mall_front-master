@@ -1,0 +1,101 @@
+@import 'variable';
+@import 'mixin';
+
+$input_height : 32px;
+$input_line_height : 22px;
+
+.v-date-picker-table {
+  height: 320px;
+}
+
+.select_date_wrap { display: inline-block; width: 100%;
+
+  .select_date_wrap__content_wrap {
+    > * { margin-right: 10px; display: inline-block; float: left; margin-bottom: 10px; }
+    > *:last-child { margin-right: 0; }
+
+    select { max-width: 120px; height: $input_height; }
+
+    .day_wrap { font-size: 0;
+      > * { float: left; }
+      a { display: inline-block;  font-size: $font_s; border: 1px solid $color_gray_b7; padding: 0 5px; margin-right: 5px;
+        height: $input_height; line-height: $input_height; background: #fff; color: $color_gray_b7;
+      }
+      a:last-child { margin-right: 0; }
+      a.on { color: $main_c_01; border-color: $main_c_01; }
+    }
+
+
+    .date_input_wrap { display: inline-block; max-width: 240px; width: 100%; height: $input_height;
+      * { display: inline-block; width: 100%; float: left; }
+      //보더바텀 삭제
+      .v-input__slot:before,
+      .v-input__slot:after { display: none !important }
+    }
+
+  }
+
+  //조회버튼
+  > a { float: left; width: 35px; margin-left: 5px; font-size: $font_s; border: 1px solid $main_c_01; text-align: center;
+      margin-bottom: 10px; height: $input_height; line-height: $input_height; background: $main_c_01; color: white;
+  }
+}
+
+
+
+
+
+//
+////.select_date_wrap 안에 컴포넌트 + a링크
+//.select_date_wrap {
+//  display: inline-block; float: left;  width: 100%;
+//  //max-width: calc(120px + 10px + 240px + 10px + 310px  + 10px + 40px + 10px);
+//
+//  //셀렉터 + 날자버튼들 + 날자인풋
+//  .select_date_wrap__content_wrap {
+//    display: inline-block; float: left; width: 100%;
+//    //max-width: calc(120px + 10px + 240px + 310px + 5px);
+//    > * { float: left; display: inline-block; }
+//
+//    //검색조건 셀렉트
+//    select { max-width: 120px; height: $input_height;  }
+//
+//    //날자 인풋
+//    .date_input_wrap { display: inline-block; max-width: 240px; width: 100%; height: $input_height;
+//      * { display: inline-block; width: 100%; float: left; }
+//      //보더바텀 삭제
+//      .v-input__slot:before,
+//      .v-input__slot:after { display: none !important }
+//
+//    }
+//  }
+//
+//  //조회버튼
+//  > a { float: left; font-size: $font_s; border: 1px solid $main_c_01; padding: 0 5px; margin-left: 5px;
+//      height: $input_height; line-height: $input_height; background: $main_c_01; color: white;
+//  }
+//}
+//
+////켈린더
+//.date_input_wrap { height: 40px; line-height: 40px;
+//  input { width: 240px; float: left;
+//    appearance: none; font-size: $font_s;
+//    height: calc(#{$input_height} - 6px); line-height: calc(#{$input_line_height} - 6px);
+//    outline: none; overflow: hidden; text-overflow: ''; border-radius: 0; display: inline-block;
+//    padding: 5px; border: 1px solid $color_gray_b7;
+//    background: exhibition_pc_01 no-repeat white calc(100% - 5px) 50%;
+//  }
+//  > span { float: left; padding: 0 10px; height: calc(#{$input_height} - 6px); line-height: calc(#{$input_line_height} + 6px); font-size: $font_s; }
+//}
+//
+//.bootstrap-datetimepicker-widget { position: absolute !important; }
+//.day_wrap { font-size: 0; display: inline-block;
+//  > * { float: left; }
+//  select { width: 120px; margin-right: 5px; height: calc(#{$input_height} - 6px); line-height: calc(#{$input_line_height} - 6px); font-size: $font_xs; }
+//  a { display: inline-block;  font-size: $font_s; border: 1px solid $color_gray_b7; padding: 0 5px; margin-right: 5px;
+//    height: $input_height; line-height: $input_height; background: #fff; color: $color_gray_b7;
+//  }
+//  a:last-child { margin-right: 0; }
+//  a.on { color: $main_c_01; border-color: $main_c_01; }
+//}
+

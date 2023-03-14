@@ -1,0 +1,50 @@
+@import 'variable';
+@import 'mixin';
+
+table { width: 100%;
+  &.bg_line { border-collapse : collapse; border-top: 1px solid $color_gray_9D; border-bottom: 1px solid $color_gray_9D;
+    thead { border-bottom: 1px solid #EDEDED;
+      th { font-size: 16px; background: #F7F7F7; }
+    }
+    tr {
+      th, td  { border-top: none; border-right: none; border-left: none; border-bottom: 1px solid #EDEDED; }
+    }
+    tr:last-of-type {
+      th, td { border-bottom: none; }
+    }
+  }
+  th, td { padding: 10px; border: 1px solid $color_gray_e1; }
+
+  thead {
+    tr {
+      th, td { text-align: center; }
+      th { background: $color_gray_f8; }
+    }
+  }
+  tbody {
+    tr {
+      td {  }
+    }
+  }
+}
+
+//테이블상단 마크업관련
+.table_top_wrap { margin-bottom: 10px; float: left; width: 100%; display: inline-block;
+  * { margin-right: 5px; display: inline-block; }
+  *:last-child { margin-right: 0; }
+  div { margin-right: 10px; }
+  div:last-child { margin-right: 0; }
+
+  input, select, span, a, div { float: left; }
+  input, select { width: 100px; height: 26px; line-height: 26px; }
+}
+
+
+.show_table {
+  font-size: $font_s;
+}
+.cancel_warp {
+  table { width: 100%;
+    th, td { border: none;}
+  }
+}

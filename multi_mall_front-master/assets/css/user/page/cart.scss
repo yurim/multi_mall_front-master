@@ -1,0 +1,14 @@
+//주문배송조회 페이지 pc
+.order_condition_wrap { width: 100%; overflow: auto;
+  li { display: inline-block; float: left;margin-right: 20px; text-align: center;
+    &:nth-child(1) .text_wrap{ color: #000;}
+    &:nth-child(7) { position: relative; padding-right: 20px; }
+    &:nth-child(7)::before { content: "";position: absolute;right: 0;top: 5px;width: 2px;height: 12px; background: #000; }
+    a { width: 100%;
+      .text_wrap,.num_wrap { display:inline-block; float: left; color: $color_gray_9D;
+      font-size: 16px;height: 40px;font-weight: bold; }
+      .text_wrap{ margin-right: 5px; }
+    }
+  }
+}
+

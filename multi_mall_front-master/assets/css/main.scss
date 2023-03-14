@@ -1,0 +1,99 @@
+//회사소개페이지는 따로
+@media(max-width: 768px) {
+  .userWrap.about_us { width: auto; min-width: auto;
+    .container { width: auto; min-width: auto; }
+  }
+}
+.userWrap { overflow-y: hidden; overflow-x: hidden; text-align: center; width: 100%; min-width: 1200px;
+
+  .container { width: 100%; min-width: 1200px; display: inline-block; position: relative; text-align: left;
+    margin-right: auto; margin-left: auto; padding: 10px; }
+
+  @media (min-width: 1264px) {
+    .container { max-width: 1200px; }
+  }
+
+  //유저 공통
+  @import 'common.scss';
+  @import 'reset.scss';
+  @import 'font.scss';
+  @import 'tooltip.scss';
+  @import 'star_rate.scss';
+  @import 'pagination.scss';
+  @import 'user/calendar';
+  @import 'user/lib/vuetify.scss';
+
+  @import 'user/layout.scss';
+  @import 'user/content_box_style.scss';
+  @import 'user/popup.scss';
+  @import 'user/mixin.scss';
+  @import 'user/variable.scss';
+  @import 'user/reset_button.scss';
+  @import 'user/reset_input.scss';
+  @import 'user/reset_table.scss';
+  @import 'user/scroll.scss';
+
+  @import 'user/page/login.scss';
+  @import 'user/page/main.scss';
+  @import 'user/page/cart.scss';
+  @import 'user/page/about.scss';
+
+  //list
+  @import 'user/list/index.scss';
+  @import 'user/list/product.scss';
+  @import 'user/list/store.scss';
+  @import 'user/list/notice.scss';
+  @import 'user/list/event.scss';
+  @import 'user/list/review.scss';
+  @import 'user/list/inquiry.scss';
+  @import 'user/list/order.scss';
+
+  //show
+  @import 'user/show/product.scss';
+  @import 'user/show/store.scss';
+  @import 'user/show/compare_price.scss';
+
+  //lib
+  @import 'user/lib/se-viewer.scss';
+  @import 'user/lib/swiper.scss';
+  @import 'user/lib/swiper_article';
+  @import 'user/lib/sticky.scss';
+  @import 'user/lib/vue-select.scss';
+
+  //익스플로러만
+  @import 'user/ie_error.scss';
+
+
+}
+
+.adminWrap { background: #f2f2f2; width: 100%;
+
+  //어드민 + 스토어 공통
+  @import 'reset.scss';
+  @import 'common.scss';
+  @import 'star_rate.scss';
+  @import 'pagination.scss';
+  @import 'user/calendar';
+  @import 'user/lib/vuetify.scss';
+
+  @import 'admin/layout.scss';
+  @import 'admin/content_box_style.scss';
+  @import 'admin/popup.scss';
+  @import 'admin/mixin.scss';
+  @import 'admin/variable.scss';
+  @import 'admin/reset_button.scss';
+  @import 'admin/reset_input.scss';
+  @import 'admin/reset_table.scss';
+  @import 'admin/scroll.scss';
+  @import 'admin/main/login.scss';
+
+  //어드민전용
+  @import 'admin/main/index.scss';
+  @import 'admin/list/index.scss';
+
+  //lib
+  @import 'admin/lib/vuetify.scss';
+  @import 'admin/lib/se-viewer.scss';
+  @import 'admin/lib/vue-select.scss';
+
+}

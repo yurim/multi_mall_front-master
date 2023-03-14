@@ -1,0 +1,99 @@
+.review_show_wrap { display: inline-block; float: left; width: 100%;
+  .swiper-slide { cursor: pointer; }
+}
+.product_title { margin: 40px 0 5px;
+  span { font-size: 18px; font-weight: 500; }
+  em { color: $main_c_01; }
+}
+.review_star_total { height: 35px; margin: 10px 0 5px;
+   * { display: inline-block; }
+  .data_star {
+    .only_star { width: 25px; height: 25px; }
+    em { font-weight: 700; font-size: 25px; vertical-align: middle; margin: 0 5px; }
+  }
+  .review_total { font-size: 14px; color: $color_gray_9D; vertical-align: sub; }
+}
+// 리뷰 평점
+.review_summary_area {
+  .review_area {
+    .data_star, .num_bar { display: inline-block; float: left; height: 25px; line-height: 25px; }
+    .data_star { margin-right: 10px; }
+    .num_bar { width: calc(100% - 85px);
+      > * { display: inline-block; float: left; }
+      .bar_wrap { width: calc(100% - 85px); margin-right: 10px;
+        .vue_progress { height: 7px !important; margin-top: 9px; }
+      }
+      .review_total { font-size: 14px; color: $color_gray_9D; }
+    }
+    &:after { content: ""; clear: both; display: block; }
+  }
+}
+.tab_menu_wrap { margin: 40px 0 5px;
+  > * { display: inline-block; float: left; }
+  >.product_title { margin: 0; }
+  .tab_menu { float: right;
+    li { display: inline-block; float: left;
+      a { padding: 0 10px; display: inline-block; text-align: center; font-size: 14px; color: $color_gray_9D; position: relative; text-decoration: underline !important;
+        &:after { content: ''; width: 1px; height: 14px; position: absolute; background: $color_gray_9D; right: 0; top: 50%; transform: translateY(-50%); }
+      }
+      a.on { color: $main_c_01; font-weight: 500;  }
+      &:last-of-type a:after { content: none; }
+    }
+  }
+  &:after { content: ""; clear: both; display: block;}
+}
+
+.review_show_wrap__list { display: inline-block; float: left; width: 100%;
+  li { display: inline-block; float: left; width: 100%; border-bottom: 1px solid #E1E1E1; padding: 15px 0;
+    > *:only-child.review_show_wrap__info_wrap { width: 100% !important; }
+
+    div { display: inline-block; float: left; width: 100%; }
+
+    .star_rate_wrap { width: auto !important; margin-bottom: 10px;}
+
+    .review_show_wrap__info_wrap { width: calc(100% - 150px); margin-right: 20px;
+      .review_show_wrap__info_wrap_option { color: $color_gray_9D; font-size: 14px; font-weight: 500; margin-bottom: 5px;
+        line-height: 20px; height: 20px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+      .content_txt {
+        .review_show_wrap__info_wrap_text { overflow: hidden; line-height: 22px; word-break: break-all; height: auto; max-height: 66px; font-size: 14px;}
+        &.on {
+          .review_show_wrap__info_wrap_text { max-height: none; }
+        }
+        .info_text_btn { margin-bottom: 5px;
+          a { font-size: 14px; color: $color_gray_9D; text-decoration: underline !important; }
+        }
+      }
+      // 판매자 답변
+      .admin_txt, .admin_txt_btn {
+        .abbreviation_icon { width: 30px; height: 30px; background-size: 26px !important; margin-right: 5px; display: inline-block;
+          background: url("../../assets/img/user/icon/abbreviation.png") no-repeat 50%; }
+      }
+      .admin_txt {
+        > * { float: left; display: inline-block; }
+        .admin { width: calc(100% - 35px);
+          p { line-height: 30px; margin-bottom: 0; font-weight: 500; font-size: 14px;
+            em { color: $color_gray_9D; margin-left: 5px; font-weight: 400; }
+          }
+        }
+      }
+        .admin_txt_btn {
+          .answer_num_txt { color: black; padding-left: 0;
+           .abbreviation_icon { float: left; }
+          }
+          a { padding-left: 35px; font-size: 14px; color: $color_gray_9D; text-decoration: underline !important; line-height: 30px; }
+        }
+      // 답변 공통
+      .txt_story { word-break: break-all; white-space: pre-wrap; }
+    }
+    .review_show_wrap__img_wrap { width: 130px; cursor: pointer;
+      img { width: 100%; }
+    }
+  }
+  //li:after { content: ""; display: block; clear: both; }
+  li:last-of-type { border-bottom: 0; }
+}
+.review_show_wrap__list:after { content: ""; display: block; clear: both; }
+.review_show_btn { width: 100%; padding: 5px; background: #fff; box-shadow: 0 4px 4px 0 rgba(0,0,0,0.1) !important; text-align: center;
+  display: inline-block; margin-top: 10px;
+  a {  width: 100%; border: 0; display: block; color:#707070; font-size: 14px; font-weight: 500;  }
+}

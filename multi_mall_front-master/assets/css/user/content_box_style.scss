@@ -1,0 +1,59 @@
+@import 'variable';
+@import 'reset_button';
+
+.col_wrap { float: left; @extend .d_ib_100;
+  .col_one, .col_too, .col_three, .col_half { display: inline-block; float: left; margin-bottom: 15px;
+
+    .page_title { font-size: $font_m; font-weight: bold; border-bottom: 1px solid $color_gray_a; padding: 20px 10px 15px 10px; text-align: left;
+      > * { display: inline-block; float: left; }
+      > *:first-child { margin-right: 5px; }
+      span { font-size: $font_xs; color: $color_b; font-weight: normal; margin-top: 10px; line-height: $font_xs; }
+    }
+
+    > table { box-shadow: 6px 5px 5px rgba(0, 0, 0, 0.05);
+      th { background: $color_gray_f8 !important; font-weight: bold; }
+    }
+
+    & .form_wrap > ul, & form > ul,
+    > ul { width: calc(100% - 10px); display: inline-block; margin-bottom: 15px; background: white; padding-left: 0 !important; box-shadow: 6px 5px 5px rgba(0, 0, 0, 0.05);
+      &.line_bottom { box-shadow: none; border-bottom: 1px solid $color_gray_9D; margin-bottom: 20px; }
+      &.shadow_none { box-shadow: none; }
+
+      > li:first-child { padding: 15px 10px; }
+      > li { padding: 10px; display: inline-block; width: 100%; position: relative;
+        > li { padding: 10px; display: inline-block; width: 100%; }
+        .title, .body { display: inline-block; float: left; font-size: $font_s !important; min-height: 30px; line-height: 30px; }
+
+        > .title { color: #777; width: calc(150px); margin-right: 10px; }
+        > .body { width: calc(100% - 160px); }
+      }
+    }
+    > *:last-child { margin-bottom: 0; }
+
+    > table, .table_wrap { width: calc(100% - 10px); margin-bottom: 15px; background: white;
+      tr {
+        th { color: #777; }
+        th, td { font-size: $font_s !important; text-align: left; padding: 10px; }
+      }
+    }
+  }
+
+  .col_one { width: 33%; }
+  .col_too { width: 66%; margin-right: 0;
+   th { font-weight: bold; text-align: left; }
+    .explain_wrap { color: #777; font-size: 14px; }
+  }
+  .col_three { width: 99%; margin-left: 0; }
+  .col_half { width: 49.5%; margin-left: 0; }
+  .col_half:nth-child(2n + 2) { width: 49.5%; }
+
+  .cancel_warp {
+    .title { padding-bottom: 0 !important; }
+  }
+}
+
+
+
+
+
+

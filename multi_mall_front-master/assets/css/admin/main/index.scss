@@ -1,0 +1,36 @@
+
+
+//현황들 높이 관련
+.admin_main_wrap {
+  .first_ul ul { min-height: 330px; width: 100%; }
+  ul ul { min-height: 110px; }
+}
+
+//첫번재 현황
+.admin_main_sale_wrap {
+  img { width: 100%; max-width: 25px; max-height: 25px; }
+}
+.admin_main_sale_board { display: inline-block;
+  li:nth-child(3n + 3) { margin-right: 0; }
+  li { text-align: center; display: inline-block; float: left; width: 32%; margin-right: 2%; margin-bottom: 3%;
+    a { display: inline-block; width: 100%; text-align: center;
+      > * { width: 100%; display: inline-block }
+      .img_wrap { background: $color_gray_4; width: 70px; height: 70px; @extend .radius_st; position: relative;
+        img { max-height: 40px; max-width: 40px; @include apsolute_center}
+      }
+      .text_wrap { font-size: 18px; }
+      .num_wrap { font-size: 24px; font-weight: bold; color: $main_c_01; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+    }
+  }
+}
+.admin_main_wrap {
+  //메인에서 flex를 사용할 수 있는 ul
+  .flex_wrap {
+    margin-bottom: 10px; display: flex;
+    li { flex: 1; overflow: auto; display: inline-block; text-align: center; justify-content: space-between;
+      padding: 20px 0;
+      .text_wrap { font-size: $font_m; margin-bottom: 10px; }
+      .num_wrap { font-weight: bold; color: $main_c_01; font-size: $font_l; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+    }
+  }
+}

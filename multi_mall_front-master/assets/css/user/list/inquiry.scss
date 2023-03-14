@@ -1,0 +1,46 @@
+.inquiry_list_wrap {
+  > ul.inquiry_list_wrap__first_wrap {
+    //문의 반복
+    > li { border-bottom: 1px solid #E1E1E1; padding: 10px 0;
+      > ul.inquiry_list_wrap__second_wrap {
+        //답변 반복
+        > li { margin-left: 20px; padding: 5px 0;
+          .writer_wrap {
+            > * { margin-right: 5px; }
+            > *:last-child { margin-right: 0; }
+          }
+          textarea { margin-top: 10px; }
+        }
+        > li:first-child { margin-left: 0; }
+      }
+    }
+    > li:first-child { border-top: 1px solid #E1E1E1; }
+  }
+}
+
+
+.mypage_inquiry_list_wrap { display: inline-block; float: left; width: 100%; box-shadow: 6px 5px 5px rgba(0, 0, 0, 0.05);
+  > li { padding: 25px; }
+  li { display: inline-block; float: left; width: 100%;
+    .mypage_inquiry_list_wrap__title_wrap {
+      > * { display: inline-block; float: left; }
+    }
+    .mypage_inquiry_list_wrap__info_wrap {
+
+    }
+    .mypage_inquiry_list_wrap__data_wrap { width: auto; }
+    @media(max-width: 768px) {
+      .mypage_inquiry_list_wrap__data_wrap { width: 100%; }
+    }
+  }
+}
+
+.mypage_review_wrap { display: inline-block; float: left; width: 100%; box-shadow: 6px 5px 5px rgba(0, 0, 0, 0.05);
+  .review_show_wrap__list {
+    li { padding: 25px;
+      .list_wrap { margin-bottom: 10px;
+      &:last-child { margin-bottom: 0; }
+      }
+    }
+  }
+}

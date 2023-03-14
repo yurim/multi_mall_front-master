@@ -1,0 +1,8 @@
+.login_wrap { display: block; margin: 0 auto; width: 100%; max-width: 400px; padding-top: 40px;
+  .login_wrap_title { margin-bottom: 20px; padding: 10px 0; border-bottom: 1px solid #ACACAC; width: 100%; display: inline-block; width: 100%; }
+  ul { width: 100%; display: inline-block;
+    li { width: 100%; display: inline-block; margin-bottom: 10px; }
+    li:last-of-type { margin-bottom: 0; }
+  }
+  input { padding: 5px; }
+}

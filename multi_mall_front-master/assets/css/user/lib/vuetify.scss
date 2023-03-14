@@ -1,0 +1,86 @@
+.v-data-table__wrapper {
+  table {
+    thead {
+      tr {
+        th { background: #F8F8F8 !important; }
+        td { }
+      }
+    }
+    tbody {
+      tr {
+        th { }
+        td { }
+      }
+    }
+  }
+
+}
+.v-application { display: block !important; }
+.v-application a { color: black !important; }
+
+//.paginationWrap { @extend .d_ib_100;
+//  input { border: none !important; }
+//
+//  button { border: none !important; }
+//
+//  //페이지 셀렉트
+//  .multiselect { width: 160px !important; }
+//
+//}
+
+.v-data-table__wrapper { max-height: 450px; overflow: scroll;
+  table { min-width: 1200px; word-break: keep-all !important;
+    [class="text"] {
+      a { color: $color_b; text-underline: $color_b; }
+    }
+    tbody {
+     tr {
+       td { padding: 5px !important; height: initial !important; line-height: initial !important; margin: 0 !important; }
+     }
+    }
+  }
+}
+
+//.content_wrap {
+//  .col_wrap {
+//    .table_wrap {
+//      li {
+//        .v-application, .elevation-1, .v-application.elevation-1 { box-shadow: 0 !important; }
+//      }
+//    }
+//  }
+//}
+
+
+.v-application ul,
+.v-application ol { margin: 0 !important; padding-left: 0 !important; }
+
+
+
+.v-application ul, .v-application ol { margin: 0 !important; padding-left: 0 !important; }
+.v-application {
+  ul { padding-left: 0 !important; }
+}
+ul { padding-left: 0 !important; }
+
+.container { margin-right: auto !important; margin-left: auto !important; }
+
+
+
+.v-application .elevation-1 {
+  box-shadow: none !important;
+}
+.v-application { box-shadow: none !important;
+  *,
+  .elevation-1 { box-shadow: none !important; }
+}
+.elevation-1 { box-shadow: none !important; }
+
+.v-data-table { border: 1px solid #d9d9d9; box-shadow: none !important;
+  > * { box-shadow: none !important }
+}
+// 평점 색상
+.vue_progress {
+  .v-progress-linear__background.primary { background-color: #F5F5F5 !important; border-color: #F5F5F5 !important; opacity: 1 !important; }
+  .v-progress-linear__determinate.primary { background-color: $main_c_01 !important; border-color: $main_c_01 !important; }
+}

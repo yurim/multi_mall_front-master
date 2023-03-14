@@ -1,0 +1,91 @@
+@import 'variable';
+@import 'mixin';
+
+.radius_st { border-radius: 1px; }
+
+.color_b { color: $color_b; }
+.under_line { text-decoration: underline !important; }
+
+$a_height : 40px;
+$a_line_height : 40px;
+
+
+//버튼 공통 스타일
+.but_style {
+  min-width: 100px; text-align: center; color: white; background: $main_c_01; display: inline-block; padding: 0 15px;
+  border: 1px solid $main_c_01; height: $a_height; line-height: $a_line_height;
+  @extend .radius_st;
+}
+.but_wrap { display: inline-block; width: 100%;
+  &.l_h_34 {
+    a, button, input[type=submit] { height: calc(#{$a_height} - 6px) !important; line-height: calc(#{$a_height} - 6px) !important; }
+   }
+  a, button, input[type=submit] { @extend .but_style; margin-right: 5px; }
+  a:last-child, button:last-child, input[type=submit]:last-child { margin-right: 0; }
+}
+
+//작은 네모버튼
+.square_but_wrap { font-size: 0;
+  a, button, input[type=submit]{ @extend .but_style; margin-right: 5px; border-radius: 0 !important; padding: 0 10px; font-size: $font_xs;
+    height: calc(#{$a_height} - 15px); line-height: calc(#{$a_line_height} - 16px); min-width: auto !important; font-weight: 500;
+  }
+  select, input { float: left; height: calc(#{$a_height} - 15px) !important; line-height: calc(#{$a_line_height} - 15px) !important; width: 120px; font-size: $font_xs; color: $color_gray_4; }
+  option {  }
+  a:last-child, button:last-child, input[type=submit]:last-child { margin-right: 0; }
+}
+
+//공통 작은 버튼
+.small_but_style {
+  @extend .radius_st;
+  text-align: center; color: white; background: $main_c_01; display: inline-block; padding: 2px 5px;
+  border: 1px solid $main_c_01; height: calc(#{$a_height} - 6px); line-height: calc(#{$a_line_height} - 10px); font-size: $font_s;
+}
+.middle_but_style {
+  @extend .radius_st;
+  text-align: center; color: white; background: $main_c_01; display: inline-block; padding: 2px 15px;
+  border: 1px solid $main_c_01; height: calc(#{$a_height} - 6px); line-height: calc(#{$a_line_height} - 10px); font-size: $font_s;
+}
+.small_but_wrap { display: inline-block;
+  a, button, input[type=submit] { @extend .small_but_style; height: calc(#{$a_height} - 10px); line-height: calc(#{$a_line_height} - 14px); }
+  a, button, input[type=submit]:last-child { margin-right: 0; }
+}
+
+//각 버튼 색만 변경해야할때
+.btn_small { @extend .small_but_style;
+  &.line_but { color: $main_c_01; border: 1px solid $main_c_01; background: white !important; }
+  &.black_line_but { color: black; border: 1px solid black; background: white !important; }
+  &.gray_but { color: white; border: 1px solid $color_gray_4; background: $color_gray_7 !important; }
+  &.gray_but_light { color: black; border: 1px solid $color_gray_4; background: $color_gray_f3 !important; }
+}
+
+//각 버튼 색만 변경해야할때
+.but_wrap, .small_but_wrap, .square_but_wrap {
+  .line_but { color: $main_c_01; border: 1px solid $main_c_01; background: white !important; }
+  .black_line_but { color: black; border: 1px solid black; background: white !important; }
+  .red_line_but { color: $color_r; border: 1px solid $color_r; background: white !important; }
+  .red_but {  color: white; border: 1px solid $color_r; background: $color_r !important; }
+  .gray_but { color: white; border: 1px solid $color_gray_4; background: $color_gray_7 !important; }
+  .gray_but_light { color: black; border: 1px solid $color_gray_4; background: $color_gray_f3 !important; }
+  .gray_line_but { color: $color_gray_70; border: 1px solid $color_gray_70; background: white !important; }
+}
+
+
+//물음표 버튼(팝업용)
+.question_mark_btn { display: inline-block; color: white; background: $color_b;
+  $question_mark: 20px;
+  width: $question_mark; height: $question_mark; line-height: $question_mark;
+  border-radius: $question_mark; text-align: center; margin-left: 10px;
+}
+
+.border_active_wrap {
+  .active { color: $main_c_01; border-color: $main_c_01; }
+}
+// 버튼안에 input_file 들어가 있을때
+.square_but_wrap {
+  .input_file_wrap { margin-left: 5px;
+   label, input {  padding: 0 10px; font-size: $font_xs;
+     height: calc(#{$a_height} - 15px); line-height: calc(#{$a_line_height} - 15px); min-width: auto !important;
+   }
+  }
+}
+

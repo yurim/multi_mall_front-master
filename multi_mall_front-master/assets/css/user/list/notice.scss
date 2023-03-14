@@ -1,0 +1,26 @@
+//이벤트 목록
+.notice_list_wrap { margin-top: 40px; display: inline-block; width: 100%; float: left;
+  tr:first-child { border-top: 1px solid $color_gray_e1; }
+  tr { border-bottom: 1px solid $color_gray_e1;
+    td { padding: 10px 10px !important; border: 0 !important; vertical-align: top;
+      .arrow_wrap {
+        img { margin: 6px 0; transition: all 200ms; }
+      }
+      .arrow_wrap.on {
+        img { transform: rotate(180deg); }
+      }
+    }
+  }
+}
+
+.bbs_show_wrap { @extend .d_ib_100;
+  > * { @extend .d_ib_100; padding: 5px 10px; border-bottom: 1px solid #E1E1E1; }
+  .bbs_show_wrap__title_wrap { border-top: 1px solid #E1E1E1;
+    > * { display: inline-block; float: left; }
+    .bbs_show_wrap__title_wrap__title { width: calc(100% - 100px); margin-right: 10px; }
+    .bbs_show_wrap__title_wrap__date { width: 90px; }
+  }
+  .bbs_show_wrap__body_wrap { margin-bottom: 40px;
+
+  }
+}

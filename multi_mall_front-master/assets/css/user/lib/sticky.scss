@@ -1,0 +1,10 @@
+/*
+vue-sticky-directive 사용법 권용식(2021-08-31, 화, 22:4)
+부모영역에 sticky-container 추가
+움직여야할 자식에 v-sticky sticky-offset="{top: 80, bottom: 30}" sticky-side="both" on-stick="onStick" sticky-z-index="20" 추가
+https://github.com/mehwww/vue-sticky-directive#readme
+ */
+
+.sticky_wrap { position: relative;
+  .sticky_shadow { width: calc(100% - 10px); display: inline-block; margin-bottom: 15px; background: white; border-top: 1px solid $color_gray_9D; }
+}
